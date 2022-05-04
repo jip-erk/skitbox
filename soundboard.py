@@ -101,8 +101,8 @@ def play(sound):
    global slider_pos
    song = pygame.mixer.Sound(filename)
    slider_pos = int(song.get_length())
-   AudioProgress.config(to=slider_pos, value=0) 
-   play_Time()
+  # AudioProgress.config(to=slider_pos, value=0) 
+   #play_Time()
 
 
 
@@ -112,12 +112,12 @@ def play_Time():
     newtime += 1
    
     
-    if int(AudioProgress.get()) == int(current_time):
-        print(AudioProgress.get(), current_time)
-        AudioProgress.config(to=slider_pos, value=int(newtime))
+   # if int(AudioProgress.get()) == int(current_time):
+     #   print(AudioProgress.get(), current_time)
+        #AudioProgress.config(to=slider_pos, value=int(newtime))
        
-    else:
-        AudioProgress.config(to=slider_pos, value=int(AudioProgress.get()))
+  #  else:
+     #   AudioProgress.config(to=slider_pos, value=int(AudioProgress.get()))
         #mixer.music.play(loops=0, start=int(AudioProgress.get())) 
         
     if current_time > 0.01:
